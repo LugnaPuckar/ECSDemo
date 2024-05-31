@@ -1,6 +1,7 @@
-FROM amazonlinux:2023
-# Alternative if you get an error due to Docker Hub rate limiting:
-# FROM public.ecr.aws/amazonlinux/amazonlinux:2023
+FROM public.ecr.aws/amazonlinux/amazonlinux:2023
+# Using the above FROM due to docker hub rate limiting.
+# Can use the below one but risk for rate limiting.
+# FROM amazonlinux:2023
 
 RUN dnf update -y
 RUN dnf install -y nginx
